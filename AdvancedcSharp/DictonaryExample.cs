@@ -25,9 +25,13 @@ namespace AdvancedcSharp
 
 
             // adding elements using dictonary using add method of dictonary class
+           
             dcountry.Add("IN", "India");
             dcountry.Add("UK", "United State");
+            dcountry.Add("Shy", "Shyamiwala");
+            dcountry.Add("Hari", "Haridwar");
 
+            Console.WriteLine($"Total Countries: {dcountry.Count}"); // total country
 
             Console.WriteLine();
             // Accessing elements using foreach loop
@@ -36,6 +40,18 @@ namespace AdvancedcSharp
                 Console.WriteLine($"Key: {KVP.Key} Value: {KVP.Value} ");
             }
 
+
+            //************* Remove one country ************
+            if (dcountry.ContainsKey("Shy"))
+            {
+                dcountry.Remove("Shy");
+                Console.WriteLine($"Total after remove one element: {dcountry.Count} ");
+                foreach(var count in dcountry)
+                {
+                    Console.WriteLine($"Key {count.Key} Values: {count.Value} ");
+                }
+            }
+            //************* end country after remove ******
 
             Console.WriteLine(); /// terminate for new line
             // Accessing elements using for loops
