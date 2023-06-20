@@ -14,6 +14,16 @@ namespace AdvancedcSharp
             // creatin a dictonary with key and value both are string type
             Dictionary<string, string> dcountry = new Dictionary<string, string>();
 
+            // creating a dictoanry with key and vlaue both are collection Initializers
+            Dictionary<string, string> daction = new Dictionary<string, string>
+            {
+                {"1","Hight" },
+                {"2","Medums" },
+                {"3", "Low" }
+            };
+
+
+
             // adding elements using dictonary using add method of dictonary class
             dcountry.Add("IN", "India");
             dcountry.Add("UK", "United State");
@@ -35,6 +45,15 @@ namespace AdvancedcSharp
                 string value = dcountry[key];
                 Console.WriteLine($"Key: {key} Value: {value} ");
             }
+
+
+            Console.WriteLine(); // for terminate the line
+            // Accessing elements using foreach loop
+            foreach (var levels in daction)
+            {
+                Console.WriteLine($"Level: {levels.Key} Value: {levels.Value} ");
+            }
+
 
             Console.ReadLine();
         }
